@@ -31,5 +31,12 @@ namespace WebApplication99.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpGet]
+        public IActionResult GetData()
+        //public JsonResult GetData() bu şekilde de yazabiliriz.
+        {
+            return Json(new { Name = "Mustafa", Surname = "Kemal" });
+        }
     }
 }
