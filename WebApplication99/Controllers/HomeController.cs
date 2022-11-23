@@ -38,5 +38,11 @@ namespace WebApplication99.Controllers
         {
             return Json(new { Name = "Mustafa", Surname = "Kemal" });
         }
+
+        [HttpPost]
+        public IActionResult PostData([FromBody]PostDataApiModel model)
+        {
+            return Json(new { Error = false, Message = "Success" });
+        }
     }
 }
